@@ -144,10 +144,28 @@ date,person,miles
 
 ```plaintext
 csv-runner/
-├── 📂 app/             # Next.js App Router pages
-├── 📂 components/      # Reusable UI components
-├── 📂 lib/             # Core logic (parsing, validation)
-└── 📄 public/          # Static assets
+├── 📂 app/                     # Next.js App Router pages
+│   ├── layout.tsx              # Root layout with ThemeProvider and font setup
+│   ├── page.tsx                # Main dashboard page assembling all components
+│   └── globals.css             # Global Tailwind styles and CSS parsing
+│
+├── 📂 components/              # Reusable UI components
+│   ├── 📂 ui/                  # shadcn/ui primitive components (buttons, cards, etc.)
+│   ├── CsvUploader.tsx         # File dropzone with validation logic
+│   ├── OverallChart.tsx        # Aggregated bar/line charts for all runners
+│   ├── PersonChart.tsx         # Individual progress line charts
+│   ├── PersonSelector.tsx      # Dropdown for drill-down analysis
+│   ├── SummaryCards.tsx        # Stat cards (Avg, Min, Max, Total)
+│   └── ThemeToggle.tsx         # Light/Dark mode switcher
+│
+├── 📂 lib/                     # Core business logic (isolated from UI)
+│   ├── csvParser.ts            # Raw CSV string parsing to JSON
+│   ├── metrics.ts              # Mathematical calculations (aggregations, stats)
+│   ├── validators.ts           # Zod-based schemas and strict data validation
+│   └── utils.ts                # Helper functions (CN, date formatting)
+│
+├── � public/                  # Static assets
+└── 📄 tailwind.config.ts       # Design system configuration
 ```
 
 ---
