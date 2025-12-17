@@ -230,3 +230,11 @@ csv-runner/
 *   Data is stored in memory only
 
 *These trade-offs are intentional to keep scope focused.*
+
+---
+
+## 🔮 Future Improvements
+
+- **Runner-to-runner comparison views** to highlight relative performance using existing metrics.
+- **Support for additional CSV edge cases** such as quoted fields and escaped commas.
+- **Performance optimizations** for very large CSV files.
