@@ -1,36 +1,55 @@
 # 📊 CSV Runner Analytics Dashboard
 
-<p align="center">
-  <strong>A production-quality CSV analytics dashboard built with Next.js</strong><br>
-  Clean • Validated • Accessible • Client-side
-</p>
+<div align="center">
 
-<p align="center">
-  <img src="https://img.shields.io/badge/Next.js-14-black?style=for-the-badge&logo=nextdotjs" alt="Next.js 14" />
-  <img src="https://img.shields.io/badge/TypeScript-Strict-blue?style=for-the-badge&logo=typescript" alt="TypeScript Strict" />
-  <img src="https://img.shields.io/badge/UI-shadcn/ui-000000?style=for-the-badge&logo=shadcnui" alt="shadcn/ui" />
-  <img src="https://img.shields.io/badge/Charts-Recharts-22c55e?style=for-the-badge&logo=recharts" alt="Recharts" />
-  <img src="https://img.shields.io/badge/Client--Side-Only-success?style=for-the-badge" alt="Client-Side Only" />
-</p>
+  <img src="https://img.shields.io/badge/Next.js%2014-black?style=for-the-badge&logo=nextdotjs&logoColor=white" alt="Next.js 14" />
+  <img src="https://img.shields.io/badge/TypeScript-Strict-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=for-the-badge&logo=shadcnui&logoColor=white" alt="shadcn/ui" />
+  <img src="https://img.shields.io/badge/Recharts-22b5bf?style=for-the-badge&logo=recharts&logoColor=white" alt="Recharts" />
+  <img src="https://img.shields.io/badge/Client_Only-Success?style=for-the-badge&logo=vercel&logoColor=white" alt="Client-Side" />
+
+  <br />
+  <br />
+
+  <h3>A production-ready analytics dashboard for structured CSV data.</h3>
+  <p>Clean • Validated • Accessible • Private</p>
+
+</div>
+
+---
 
 ## ✨ Overview
 
-CSV Runner Analytics Dashboard is a clean, production-style analytics tool that allows users to upload structured CSV data and instantly derive insights through validated metrics and interactive charts.
+**CSV Runner Analytics Dashboard** is a high-performance, client-side analytics tool designed for engineering teams. It allows users to upload structured CSV data and instantly visualize insights through validated metrics and interactive charts.
 
-The project focuses on correctness, UX clarity, and maintainable frontend architecture, closely mirroring real-world internal dashboards used by engineering teams.
+> [!NOTE]
+> This project mirrors real-world internal tools, prioritizing **correctness**, **UX clarity**, and **maintainable frontend architecture**.
 
-## 🧠 What This App Does
+---
 
-- 📁 **Uploads CSV files** with strict validation.
-- 📊 **Computes accurate summary metrics.**
-- 📈 **Visualizes trends and distributions.**
-- 👤 **Supports per-person drill-down analysis.**
-- ♿ **Designed with accessibility in mind.**
-- ⚡ **Runs entirely client-side** (no backend required).
+## 📱 Application Flow & Features
 
-## 📂 Supported CSV Format
+<div align="center">
 
-To ensure accurate processing, your CSV should follow this structure:
+| 📁 **1. Upload** | 📊 **2. Analyze** | 👤 **3. Drill-down** |
+| :---: | :---: | :---: |
+| Drag-and-drop CSVs<br>Instant Validation<br>Error Feedback | Summary Metrics<br>Trend Visualization<br>Overall Stats | Individual Performance<br>Per-Person Metrics<br>Specific History |
+
+</div>
+
+<br>
+
+### 🧠 Core Capabilities
+*   **Strict CSV Validation**: Ensures data integrity before processing.
+*   **Instant Analytics**: Computes averages, min/max, and totals in milliseconds.
+*   **Privacy-First**: Runs 100% in the browser. No data leaves your device.
+*   **Accessibility**: Fully navigable via keyboard with ARIA support.
+
+---
+
+## 📂 Data Format & Validation
+
+To ensure accurate processing, your CSV must follow this strict schema:
 
 ```csv
 date,person,miles
@@ -40,160 +59,97 @@ date,person,miles
 ```
 
 ### 🛡️ Validation Rules
+| Field | Rule | Error Behavior |
+| :--- | :--- | :--- |
+| **date** | `YYYY-MM-DD` format | Row rejected |
+| **person** | Non-empty string | Row rejected |
+| **miles** | Positive number | Row rejected |
+| **headers** | Exact match | **File rejected** |
 
-- **date** → Valid date format (e.g., YYYY-MM-DD).
-- **person** → Non-empty string.
-- **miles** → Must be a positive number.
-- **Headers** → Must match the format exactly.
+> [!IMPORTANT]
+> If a file contains errors, the dashboard will display a **human-readable error report** and prevent rendering until fixed.
 
-> **Note:** Invalid files display clear, human-readable errors and will not render analytics until corrected.
-
-## 🧭 Application Flow
-
-### 🔹 1. Upload
-- Drag-and-drop CSV upload or file picker fallback.
-- Inline validation feedback.
-- "Replace CSV" option for quick swaps.
-
-### 🔹 2. Overall Analysis
-- **Summary Metrics:** Average Miles, Minimum Miles, Maximum Miles.
-- **Charts:** Total Miles per Person (Bar) and Miles Over Time for all runners (Line).
-
-### 🔹 3. Per-Person Analysis
-- Dedicated Person Selector dropdown.
-- Specific metrics (Avg / Min / Max) for the selected individual.
-- Drill-down Line Chart for personal progress.
-- Empty states guide users when data is not yet available.
+---
 
 ## 🚀 Tech Stack
 
-| Layer | Technology |
-|-------|------------|
-| **Framework** | Next.js 14 (App Router) |
-| **Language** | TypeScript |
-| **Styling** | Tailwind CSS |
-| **UI Components** | shadcn/ui |
-| **Charts** | Recharts |
-| **Icons** | Lucide React |
+<div align="center">
 
-## 🛠️ Setup & Run
+| Core | UI & Styling | Visualization |
+| :---: | :---: | :---: |
+| <img src="https://img.shields.io/badge/Next.js_14-000000?style=flat-square&logo=nextdotjs&logoColor=white" /> | <img src="https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=flat-square&logo=tailwindcss&logoColor=white" /> | <img src="https://img.shields.io/badge/Recharts-22b5bf?style=flat-square&logo=recharts&logoColor=white" /> |
+| <img src="https://img.shields.io/badge/TypeScript-3178C6?style=flat-square&logo=typescript&logoColor=white" /> | <img src="https://img.shields.io/badge/shadcn%2Fui-000000?style=flat-square&logo=shadcnui&logoColor=white" /> | <img src="https://img.shields.io/badge/Lucide_Icons-F64900?style=flat-square&logo=lucide&logoColor=white" /> |
 
-### Prerequisites
-- Node.js ≥ 18 (LTS recommended)
-- npm ≥ 9
+</div>
 
-### Installation
+---
 
+## 🛠️ Setup & Usage
+
+### 1. Installation
 ```bash
 npm install
 ```
 
-### Run (Development)
-
+### 2. Run Development Server
 ```bash
 npm run dev
 ```
+> Open [http://localhost:3000](http://localhost:3000) to view the dashboard.
 
-Open: [http://localhost:3000](http://localhost:3000) 👈
-
-### Build (Optional)
-
+### 3. Build for Production
 ```bash
 npm run build
 npm start
 ```
 
+---
+
 ## ✅ Verification Checklist
 
-### Upload & Validation
+### 🟢 Upload & Validation
 - [x] Valid CSV auto-navigates to analytics.
 - [x] Invalid headers or rows show visible errors.
 - [x] Empty files are rejected gracefully.
 
-### Analytics
-- [x] Metrics calculated correctly.
-- [x] Charts include titles, axes, and interactive tooltips.
+### 🔵 Analytics
+- [x] Metrics calculated correctly (Avg/Min/Max).
+- [x] Charts include titles, axes, and tooltips.
 - [x] Fully responsive layout.
 
-### UX & Accessibility
+### 🟣 UX & Accessibility
 - [x] Keyboard navigation support.
-- [x] Proper labels and focus states.
-- [x] High-contrast UI.
-- [x] Friendly empty and loading states.
+- [x] High-contrast UI & Focus states.
+- [x] Friendly empty/loading states.
 
-## 🧪 Example Calculations
+---
 
-Given the following input:
+## 🧪 Example Outputs
 
+**Input:**
 ```csv
 date,person,miles
 2024-01-01,Alice,5.5
 2024-01-02,Bob,3.2
-2024-01-03,Alice,7.1
 ```
 
-The dashboard will output:
+**Output:**
+*   **Average Miles:** `4.35`
+*   **Total Miles (Alice):** `5.5`
+*   **Total Miles (Bob):** `3.2`
 
-- **Average Miles:** 5.27
-- **Min Miles:** 3.2
-- **Max Miles:** 7.1
-- **Alice Total:** 12.6
+---
 
 ## 🏗️ Project Structure
 
 ```plaintext
-csv-reader/
-├── app/
-│   ├── layout.tsx
-│   ├── page.tsx
-│   └── globals.css
-├── components/
-│   ├── CsvUploader.tsx
-│   ├── SummaryCards.tsx
-│   ├── OverallChart.tsx
-│   ├── PersonSelector.tsx
-│   └── PersonChart.tsx
-├── lib/
-│   ├── csvParser.ts
-│   ├── validators.ts
-│   └── metrics.ts
+csv-runner/
+├── 📂 app/             # Next.js App Router pages
+├── 📂 components/      # Reusable UI components
+├── 📂 lib/             # Core logic (parsing, validation)
+└── 📄 public/          # Static assets
 ```
 
-## 🏗️ Design Principles
+---
 
-- **Clear separation of concerns.**
-- **Small, reusable components.**
-- **Logic isolated from UI** (see `lib/` directory).
-- **Strong typing** throughout the application.
-- **Accessibility-first mindset.**
-
-## ⚠️ Limitations
-
-- CSV parsing does not currently support quoted fields or escaped commas.
-- Date parsing relies on standard JavaScript Date objects.
-- Large files (>10MB) may impact performance due to client-side processing.
-- No persistence (data is kept in-memory only).
-
-*These are intentional trade-offs to keep the scope focused on the core assignment requirements.*
-
-## ♿ Accessibility
-
-- Keyboard-accessible tabs and controls.
-- ARIA-compliant navigation.
-- Visible focus indicators for all interactive elements.
-- WCAG-compliant color contrast.
-- Descriptive error and loading feedback.
-
-## 📝 Notes for Reviewers
-
-This project intentionally avoids backend complexity to focus on:
-- Input validation
-- UX clarity
-- Data correctness
-- Maintainable frontend architecture
-
-The implementation aims to reflect how real-world internal dashboards are built and reviewed in professional engineering teams.
-
-## 📄 License
-
-Provided for evaluation and demonstration purposes only.
+*Built for the **Advanced Engineering Assessment**.*
