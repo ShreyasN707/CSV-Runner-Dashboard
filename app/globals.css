@@ -53,8 +53,12 @@
   * {
     @apply border-border;
   }
+  html, body {
+    @apply h-full w-full overflow-hidden bg-background;
+    overscroll-behavior: none;
+  }
   body {
-    @apply bg-background text-foreground transition-colors duration-200 antialiased;
+    @apply text-foreground transition-colors duration-200 antialiased;
     font-feature-settings: "rlig" 1, "calt" 1;
   }
 }

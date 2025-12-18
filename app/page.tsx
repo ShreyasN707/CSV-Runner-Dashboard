@@ -48,8 +48,8 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen sm:h-screen overflow-hidden bg-background transition-colors duration-200">
-      <div className="h-full min-h-screen sm:min-h-0 flex flex-col container mx-auto px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 max-w-[1920px]">
+    <main className="h-full w-full bg-background transition-colors duration-200 flex flex-col items-center">
+      <div className="w-full h-full flex flex-col max-w-[2000px] px-3 sm:px-4 md:px-6 py-2 sm:py-3 md:py-4 mx-auto">
         <div className="mb-2 sm:mb-3 flex items-center justify-between animate-fade-in shrink-0">
           <div className="flex items-center gap-1.5 sm:gap-2">
             <BarChart3 className="h-4 w-4 sm:h-5 sm:w-5 text-[#3B82F6] animate-float" />
