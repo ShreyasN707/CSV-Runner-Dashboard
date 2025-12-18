@@ -16,7 +16,7 @@ export function SummaryCards({ data }: SummaryCardsProps) {
 
   return (
     <div className="grid gap-2 sm:gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 animate-fade-in">
-      <Card className="animate-slide-up transition-all duration-300 hover:shadow-md hover:scale-[1.01] sm:hover:scale-[1.02] border-l-4 border-l-[#3B82F6] bg-gradient-to-br from-card via-card/98 to-card/95 backdrop-blur-sm group shadow-sm">
+      <Card className="animate-slide-up transition-all duration-300 hover:shadow-md border-l-4 border-l-[#3B82F6] bg-gradient-to-br from-card via-card/98 to-card/95 backdrop-blur-sm group shadow-sm">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-1 px-3 sm:px-4 pt-2.5 sm:pt-3">
           <CardTitle className="text-xs sm:text-sm font-semibold text-foreground/80">Average Miles</CardTitle>
           <Activity className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#3B82F6] group-hover:scale-110 transition-transform" />
@@ -30,8 +30,8 @@ export function SummaryCards({ data }: SummaryCardsProps) {
           </p>
         </CardContent>
       </Card>
-      
-      <Card className="animate-slide-up transition-all duration-300 hover:shadow-md hover:scale-[1.01] sm:hover:scale-[1.02] border-l-4 border-l-[#06B6D4] bg-gradient-to-br from-card via-card/98 to-card/95 backdrop-blur-sm group shadow-sm [animation-delay:0.05s]">
+
+      <Card className="animate-slide-up transition-all duration-300 hover:shadow-md border-l-4 border-l-[#06B6D4] bg-gradient-to-br from-card via-card/98 to-card/95 backdrop-blur-sm group shadow-sm [animation-delay:0.05s]">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-1 px-3 sm:px-4 pt-2.5 sm:pt-3">
           <CardTitle className="text-xs sm:text-sm font-semibold text-foreground/80">Minimum Miles</CardTitle>
           <TrendingDown className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#06B6D4] group-hover:scale-110 transition-transform" />
@@ -45,8 +45,8 @@ export function SummaryCards({ data }: SummaryCardsProps) {
           </p>
         </CardContent>
       </Card>
-      
-      <Card className="animate-slide-up transition-all duration-300 hover:shadow-md hover:scale-[1.01] sm:hover:scale-[1.02] border-l-4 border-l-[#10B981] bg-gradient-to-br from-card via-card/98 to-card/95 backdrop-blur-sm group shadow-sm [animation-delay:0.1s] sm:col-span-2 md:col-span-1">
+
+      <Card className="animate-slide-up transition-all duration-300 hover:shadow-md border-l-4 border-l-[#10B981] bg-gradient-to-br from-card via-card/98 to-card/95 backdrop-blur-sm group shadow-sm [animation-delay:0.1s] sm:col-span-2 md:col-span-1">
         <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-1 px-3 sm:px-4 pt-2.5 sm:pt-3">
           <CardTitle className="text-xs sm:text-sm font-semibold text-foreground/80">Maximum Miles</CardTitle>
           <TrendingUp className="h-3.5 w-3.5 sm:h-4 sm:w-4 text-[#10B981] group-hover:scale-110 transition-transform" />
