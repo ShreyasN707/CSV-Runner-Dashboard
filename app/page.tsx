@@ -16,39 +16,6 @@ export default function Home() {
   const [csvData, setCsvData] = useState<CsvRow[] | null>(null)
   const [activeTab, setActiveTab] = useState("upload")
   const [selectedPerson, setSelectedPerson] = useState<string>("")
-  const [isLoaded, setIsLoaded] = useState(false)
-
-  const STORAGE_KEY = "csv-dashboard-state-v1"
-
-  // Load state from localStorage on mount
-  useEffect(() => {
-    const savedState = localStorage.getItem(STORAGE_KEY)
-    if (savedState) {
-      try {
-        const parsed = JSON.parse(savedState)
-        if (parsed.csvData) setCsvData(parsed.csvData)
-        // Only set active tab if we have data, otherwise default to upload
-        if (parsed.csvData && parsed.activeTab) setActiveTab(parsed.activeTab)
-        if (parsed.selectedPerson) setSelectedPerson(parsed.selectedPerson)
-      } catch (e) {
-        console.error("Failed to load state", e)
-      }
-    }
-    setIsLoaded(true)
-  }, [])
-
-  // Save state to localStorage whenever it changes
-  useEffect(() => {
-    if (!isLoaded) return
-
-    // Save even if null to allow clearing
-    const stateToSave = {
-      csvData,
-      activeTab,
-      selectedPerson
-    }
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(stateToSave))
-  }, [csvData, activeTab, selectedPerson, isLoaded])
 
   // Update selected person when data changes
   useEffect(() => {
@@ -78,8 +45,6 @@ export default function Home() {
     setCsvData(null)
     setSelectedPerson("")
     setActiveTab("upload")
-    // Explicitly clear storage to prevent stale data if tab is closed immediately
-    localStorage.removeItem(STORAGE_KEY)
   }
 
   return (
